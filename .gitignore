@@ -2,4 +2,4 @@ dist
 build
 main.spec
 main.spec.swp
-
+.env

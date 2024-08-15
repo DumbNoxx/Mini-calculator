@@ -3,12 +3,17 @@
 import tkinter as tk
 from tkinter import messagebox
 import math
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+icon = os.getenv("ICON")
+wallpaper_env = os.getenv('WALLPAPER')
 screen = tk.Tk()
 screen.geometry("600x350")
 screen.title("Mini calculator")
-icon_1 = tk.PhotoImage(file="/media/dylan/Nuevo vol/pc/Documents/programacion/Python/Mini_calculadora/resources/icons/calcular.png")
-wallpaper_1 = tk.PhotoImage(file="/media/dylan/Nuevo vol/pc/Documents/programacion/Python/Mini_calculadora/resources/wallpapers/wallpaper.png")
+icon_1 = tk.PhotoImage(file=icon)
+wallpaper_1 = tk.PhotoImage(file=wallpaper_env)
 
 wallpaper = tk.Label(screen,image=wallpaper_1)
 wallpaper.place(x=0,y=0,relwidth=1,relheight=1)
