@@ -34,7 +34,7 @@ def addition():
 	n1 = text1.get()
 	n2 = text2.get()
 
-	r = float(n1) + float(n2)
+	r = int(n1) + int(n2)
 	text3.delete(0,'end')
 	text3.insert(0,r)
 	label = tk.Label(screen,text=f'You have added {n1} plus {2}')
@@ -48,7 +48,7 @@ def subtraction():
 	n1 = text1.get()
 	n2 = text2.get()
 
-	r = float(n1) - float(n2)
+	r = int(n1) - int(n2)
 	text3.delete(0,'end')
 	text3.insert(0,r)
 	label = tk.Label(screen,text=f'You have subtracted {n1} minus {2}')
