@@ -35,6 +35,13 @@ A simple and interactive mini calculator built using Python and Tkinter. This ap
 
 ## Usage
 
-Run the application:
-```bash
-python3 minicalculator.py
+1. Download the latest release from the Releases page.
+2. Extract the downloaded file.
+3. Run the executable:
+    - On Windows: Double-click the `Mini Calculator.exe` file.
+    - On macOS/Linux: Open a terminal and navigate to the extracted folder, then run:
+      ```bash
+      ./mini\calculator
+      ```
+
+---
