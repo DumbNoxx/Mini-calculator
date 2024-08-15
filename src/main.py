@@ -1,5 +1,8 @@
+#!/usr/bin/env python3 
+
 import tkinter as tk
 from tkinter import messagebox
+import math
 
 screen = tk.Tk()
 screen.geometry("600x350")
@@ -80,6 +83,35 @@ def division():
 button4 = tk.Button(screen,text='Division',command=division)
 button4.place(x=480,y=290,width=120,height=30)
 
+
+def power():
+	n1 = text1.get()
+	n2 = text2.get()
+
+	r = pow(float(n1),float(n2))
+	text3.delete(0,'end')
+	text3.insert(0,r)
+	label = tk.Label(screen,text=f'you have power of {n1} to {n2}')
+	label.place(x=220,y=330)
+	screen.after(600,label.destroy)
+
+button5 = tk.Button(screen,text='Power of the number N',command=power)
+button5.place(x=390,y=200,width=180,height=30)
+
+
+def root():
+	n1 = text1.get()
+	n2 = text2.get()
+
+	r = float(n1) ** (1/float(n2))
+	text3.delete(0,'end')
+	text3.insert(0,r)
+	label = tk.Label(screen,text=f'You have obtained the root {n2} of {n1}')
+	label.place(x=220,y=330)
+	screen.after(600,label.destroy)
+
+button6 = tk.Button(screen,text='Root N of a number',command=root)
+button6.place(x=390,y=150,width=180,height=30)
 
 
 label3 = tk.Label(screen,text='Result',bg='yellow')
